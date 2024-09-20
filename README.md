@@ -2,7 +2,7 @@
 
 ---
 
-> :warning: **Ramses main repository moved to [Github](https://github.com/ramses-organisation/ramses) ! The new address is https://github.com/ramses-organisation/ramses.** :warning:
+> :warning: **Ramses main repository moved to [Github](https://github.com/ramses-organisation/ramses) ! The new address is <https://github.com/ramses-organisation/ramses>.** :warning:
 
 *Learn more about the change and how to migrate [here](https://ramses.cnrs.fr/ramses-moves-to-github/).*
 
