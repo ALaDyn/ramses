@@ -901,7 +901,11 @@ subroutine accrete_sink(ind_grid,ind_part,ind_grid_part,ng,np,ilevel,on_creation
               endif
                
               if(agn.and.msink(isink).gt.0)then
-                 acc_ratio=dMsmbh_overdt(isink)/(4d0*pi*factG_in_cgs*msmbh(isink)*mH/(0.1d0*sigma_T*c_cgs)*scale_t)
+                 if(mass_smbh_seed>0.0)then
+                    acc_ratio=dMsmbh_overdt(isink)/(4d0*pi*factG_in_cgs*msmbh(isink)*mH/(0.1d0*sigma_T*c_cgs)*scale_t)
+                 else
+                    acc_ratio=dMsink_overdt(isink)/(4d0*pi*factG_in_cgs*msink(isink)*mH/(0.1d0*sigma_T*c_cgs)*scale_t)
+                 endif
                  if (AGN_fbk_mode_switch_threshold > 0.0) then
                     if (acc_ratio > AGN_fbk_mode_switch_threshold) then
                        ! Eddington ratio higher than AGN_fbk_mode_switch_threshold -> energy
